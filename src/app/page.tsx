@@ -1,3 +1,7 @@
+import PromoBanner from "./PromoBanner";
+
+export const dynamic = "force-dynamic";
+
 const breeds = [
   {
     name: "Lavender Ameraucana",
@@ -63,6 +67,7 @@ const products = [
 export default function Home() {
   return (
     <main className="min-h-screen overflow-hidden bg-[#f8f0df] text-[#20180f]">
+      <PromoBanner />
       <section className="relative isolate min-h-screen px-5 py-6 sm:px-8 lg:px-12">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_18%_18%,rgba(164,181,130,0.35),transparent_28%),radial-gradient(circle_at_82%_4%,rgba(164,198,202,0.38),transparent_26%),linear-gradient(135deg,#f8f0df_0%,#efe0c2_48%,#d8b992_100%)]" />
         <div className="grain absolute inset-0 -z-10 opacity-[0.16]" />
@@ -75,6 +80,7 @@ export default function Home() {
             <a href="#care" className="hover:text-[#1f2f1d]">Care</a>
             <a href="#pricing" className="hover:text-[#1f2f1d]">Pricing</a>
             <a href="#faq" className="hover:text-[#1f2f1d]">FAQ</a>
+            <a href="/shop" className="hover:text-[#1f2f1d]">Shop</a>
           </nav>
           <a
             href="#request"
