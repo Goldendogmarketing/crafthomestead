@@ -1,4 +1,5 @@
 import PromoBanner from "./PromoBanner";
+import HeroVideo from "./HeroVideo";
 
 export const dynamic = "force-dynamic";
 
@@ -68,70 +69,49 @@ export default function Home() {
   return (
     <main className="min-h-screen overflow-hidden bg-[#f8f0df] text-[#20180f]">
       <PromoBanner />
-      <section className="relative isolate min-h-screen px-5 py-6 sm:px-8 lg:px-12">
-        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_18%_18%,rgba(164,181,130,0.35),transparent_28%),radial-gradient(circle_at_82%_4%,rgba(164,198,202,0.38),transparent_26%),linear-gradient(135deg,#f8f0df_0%,#efe0c2_48%,#d8b992_100%)]" />
-        <div className="grain absolute inset-0 -z-10 opacity-[0.16]" />
-        <header className="mx-auto flex max-w-7xl items-center justify-between rounded-full border border-[#5d3d24]/10 bg-[#fff8e8]/70 px-5 py-3 shadow-sm backdrop-blur-xl">
-          <a href="#top" className="font-mono text-xl tracking-[-0.08em] text-[#1f2f1d]">
+      <section className="relative isolate flex min-h-screen flex-col px-5 py-6 text-[#fdf7ea] sm:px-8 lg:px-12">
+        <div className="absolute inset-0 -z-10 overflow-hidden bg-[#0c0a07]">
+          <HeroVideo src="/hero/hero.mp4" poster="/hero/hero-poster.webp" />
+          <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(8,7,5,0.86)_0%,rgba(8,7,5,0.6)_38%,rgba(8,7,5,0.26)_66%,rgba(8,7,5,0.1)_100%)]" />
+          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(8,7,5,0.5)_0%,transparent_22%,transparent_58%,rgba(8,7,5,0.78)_100%)]" />
+        </div>
+        <header className="mx-auto flex w-full max-w-7xl items-center justify-between rounded-full border border-white/12 bg-black/25 px-5 py-3 shadow-lg shadow-black/20 backdrop-blur-xl">
+          <a href="#top" className="font-mono text-xl tracking-[-0.08em] text-[#fdf7ea]">
             craft.
           </a>
-          <nav className="hidden items-center gap-6 text-sm text-[#4f422f] md:flex">
-            <a href="#breeds" className="hover:text-[#1f2f1d]">Breeds</a>
-            <a href="#care" className="hover:text-[#1f2f1d]">Care</a>
-            <a href="#pricing" className="hover:text-[#1f2f1d]">Pricing</a>
-            <a href="#faq" className="hover:text-[#1f2f1d]">FAQ</a>
-            <a href="/shop" className="hover:text-[#1f2f1d]">Shop</a>
+          <nav className="hidden items-center gap-6 text-sm text-[#e8dcc4] md:flex">
+            <a href="#breeds" className="transition hover:text-white">Breeds</a>
+            <a href="#care" className="transition hover:text-white">Care</a>
+            <a href="#pricing" className="transition hover:text-white">Pricing</a>
+            <a href="#faq" className="transition hover:text-white">FAQ</a>
+            <a href="/shop" className="transition hover:text-white">Shop</a>
           </nav>
           <a
             href="#request"
-            className="rounded-full bg-[#1f2f1d] px-4 py-2 text-sm font-semibold text-[#fff8e8] shadow-lg shadow-[#1f2f1d]/15 transition hover:-translate-y-0.5 hover:bg-[#314a2d]"
+            className="rounded-full bg-[#fdf7ea] px-4 py-2 text-sm font-semibold text-[#1f2f1d] shadow-lg shadow-black/20 transition hover:-translate-y-0.5 hover:bg-white"
           >
             Request Availability
           </a>
         </header>
 
-        <div id="top" className="mx-auto grid max-w-7xl items-center gap-10 pb-16 pt-20 lg:grid-cols-[1fr_0.95fr] lg:pb-24 lg:pt-28">
+        <div id="top" className="mx-auto flex w-full max-w-7xl flex-1 flex-col justify-end pb-16 pt-24 lg:pb-24">
           <div className="max-w-3xl">
-            <p className="mb-6 inline-flex rounded-full border border-[#1f2f1d]/15 bg-[#fff8e8]/70 px-4 py-2 font-mono text-xs uppercase tracking-[0.24em] text-[#536c48]">
+            <p className="mb-6 inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-2 font-mono text-xs uppercase tracking-[0.24em] text-[#dfe7cf] backdrop-blur-sm">
               small-batch homestead poultry
             </p>
-            <h1 className="text-balance text-6xl font-semibold leading-[0.9] tracking-[-0.07em] text-[#20180f] sm:text-7xl lg:text-8xl">
+            <h1 className="text-balance text-6xl font-semibold leading-[0.9] tracking-[-0.07em] text-[#fdf7ea] [text-shadow:0_2px_40px_rgba(0,0,0,0.55)] sm:text-7xl lg:text-8xl">
               Colorful hatching eggs from a small craft homestead.
             </h1>
-            <p className="mt-7 max-w-2xl text-lg leading-8 text-[#5f4e35] sm:text-xl">
+            <p className="mt-7 max-w-2xl text-lg leading-8 text-[#e7dcc8] [text-shadow:0_1px_24px_rgba(0,0,0,0.6)] sm:text-xl">
               Craft Homestead raises specialty chicken breeds on Northeast Florida pasture and timberland — with organic non-GMO feed, daily free-ranging, and careful seasonal hatch windows.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-              <a href="#request" className="rounded-full bg-[#1f2f1d] px-7 py-4 text-center font-semibold text-[#fff8e8] shadow-xl shadow-[#1f2f1d]/20 transition hover:-translate-y-1 hover:bg-[#314a2d]">
+              <a href="#request" className="rounded-full bg-[#fdf7ea] px-7 py-4 text-center font-semibold text-[#1f2f1d] shadow-xl shadow-black/30 transition hover:-translate-y-1 hover:bg-white">
                 Request Availability
               </a>
-              <a href="#breeds" className="rounded-full border border-[#1f2f1d]/20 bg-[#fff8e8]/60 px-7 py-4 text-center font-semibold text-[#1f2f1d] transition hover:-translate-y-1 hover:bg-[#fff8e8]">
+              <a href="#breeds" className="rounded-full border border-white/30 bg-white/5 px-7 py-4 text-center font-semibold text-[#fdf7ea] backdrop-blur-sm transition hover:-translate-y-1 hover:bg-white/12">
                 View Breeds
               </a>
-            </div>
-          </div>
-
-          <div className="relative mx-auto aspect-[4/5] w-full max-w-[560px] rounded-[2.5rem] border border-[#fff8e8]/70 bg-[#293922] p-4 shadow-2xl shadow-[#583c20]/25">
-            <div className="absolute -left-6 top-14 z-20 rounded-3xl border border-[#fff8e8]/70 bg-[#fff8e8]/85 p-4 shadow-xl backdrop-blur-md">
-              <p className="font-mono text-[0.65rem] uppercase tracking-[0.22em] text-[#6b7f54]">Egg color profile</p>
-              <div className="mt-3 flex gap-2">
-                {['#a7cbd0', '#8b9862', '#f6ead0', '#7b4b2a', '#d9a68f'].map((color) => (
-                  <span key={color} className="h-7 w-7 rounded-full border border-[#20180f]/10" style={{ backgroundColor: color }} />
-                ))}
-              </div>
-            </div>
-            <div className="relative h-full overflow-hidden rounded-[2rem] bg-[linear-gradient(155deg,#27371f_0%,#445e37_36%,#dbc097_72%,#f7e9ca_100%)]">
-              <div className="absolute inset-x-8 bottom-10 rounded-[2rem] border border-[#fff8e8]/60 bg-[#fff8e8]/55 p-5 shadow-2xl backdrop-blur-md">
-                <p className="font-mono text-xs uppercase tracking-[0.2em] text-[#536c48]">hero asset placeholder</p>
-                <p className="mt-3 text-2xl font-semibold tracking-[-0.04em] text-[#20180f]">Morning basket scene — pasture, color, and small-flock care.</p>
-              </div>
-              <div className="absolute left-10 top-12 h-36 w-36 rounded-full bg-[#a7cbd0]/70 blur-2xl" />
-              <div className="absolute right-6 top-40 h-44 w-44 rounded-full bg-[#8b9862]/70 blur-3xl" />
-              <div className="absolute bottom-28 left-14 grid grid-cols-4 gap-3">
-                {['#a7cbd0', '#8b9862', '#f4e7cd', '#6d4125', '#c79a7a', '#bfcf9b', '#e8cdb0', '#7f8a50'].map((color, index) => (
-                  <span key={`${color}-${index}`} className="h-14 w-11 rotate-[-10deg] rounded-[50%] border border-white/45 shadow-lg" style={{ backgroundColor: color }} />
-                ))}
-              </div>
             </div>
           </div>
         </div>

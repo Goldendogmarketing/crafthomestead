@@ -45,3 +45,6 @@ next-env.d.ts
 
 # claude code (per-user)
 .claude/settings.local.json
+
+# local video masters (uncompressed 4K/base) — the web-optimized hero.mp4 is committed
+/public/hero/_masters/
